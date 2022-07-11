@@ -1,0 +1,78 @@
+.container {
+  max-width: 1320px;
+  margin: auto;
+  .header {
+    padding: 20px;
+    @include displayCenter(center, space-between);
+    position: relative;
+    // background-color: teal;
+    .menu {
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+      @include mQ($md) {
+        display: block;
+      }
+    }
+
+    .nav_links {
+      @include displayCenter(center, space-between);
+      flex-direction: row;
+      column-gap: 30px;
+      .nav_item {
+        cursor: pointer;
+      }
+      .nav_btn {
+        cursor: pointer;
+        border: 0;
+        padding: 10px 20px;
+        background: transparent;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: #353b65;
+        border-radius: 5px;
+        font-size: 12px;
+        font-weight: bold;
+        display: inline-block;
+        line-height: 17px;
+      }
+      @include mQ($md) {
+        flex-direction: column;
+        padding: 20px;
+        position: absolute;
+        top: 66px;
+        right: 0;
+        width: 100%;
+        z-index: 2;
+        background-color: rgb(103, 68, 68);
+        display: none;
+        .nav_item,
+        .nav_btn {
+          // display: none;
+          background-image: $brand_color_secondary;
+          width: 200px;
+          text-align: center;
+          padding: 10px;
+          margin: 10px auto 0 auto;
+          border-radius: 5px;
+          color: #fff;
+          font-weight: bold;
+          text-transform: uppercase;
+          letter-spacing: 0.1rem;
+        }
+      }
+      // @include mQ($md) {
+      //   .nav_btn {
+      //     display: none;
+      //   }
+      // }
+    }
+  }
+}
+
+.toggleMenuButton {
+  display: block !important;
+  // @include mQ($lg) {
+  //   display: none !important;
+  // }
+}

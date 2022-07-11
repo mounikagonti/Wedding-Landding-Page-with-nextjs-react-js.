@@ -1,0 +1,68 @@
+.container {
+  max-width: 1320px;
+  margin: auto;
+  .services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    padding: 100px 0;
+    column-gap: 150px;
+    .services_left {
+        @include mQ($md){
+            padding: 0 50px;
+        }
+      h1 {
+        font-size: 48px;
+        line-height: 58px;
+        color: #344767;
+      }
+      p {
+        font-size: 16px;
+        line-height: 26px;
+        margin-top: 10px;
+        color: gray;
+      }
+      h2 {
+        font-size: 48px;
+        line-height: 58px;
+        color: #21c8fd;
+        margin-top: 30px;
+      }
+      .para {
+        margin-top: 15px;
+        color: gray;
+      }
+    }
+    .services_right {
+        @include mQ($md){
+            padding: 100px 50px;
+        }
+      .service_one {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 50px;
+
+        .icon {
+          min-width: 50px;
+          min-height: 50px;
+          background: $brand_color_secondary;
+          @include displayCenter(center, center);
+          color: $primary;
+          border-radius: 50%;
+          font-size: 23px;
+          margin-right: 20px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        h2 {
+          font-size: 20px;
+          line-height: 28px;
+          margin-bottom: 10px;
+        }
+        p {
+          font-size: 16px;
+          line-height: 26px;
+          color: gray;
+        }
+      }
+    }
+  }
+}
